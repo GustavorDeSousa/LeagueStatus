@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YWw-WF-7mE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Player View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchPlayerViewController" customModule="LeagueStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahriWallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="X43-Ja-kyr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEO-wQ-vpb">
+                                <rect key="frame" x="40" y="188" width="334" height="574"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uYG-OF-zAp">
+                                        <rect key="frame" x="20" y="-100" width="294" height="198"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encontre um jogador:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsa-E9-qnc">
+                                        <rect key="frame" x="10" y="78" width="314" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Sj2-3u-8M8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.75686274509999996" green="0.61568627450000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7S-FK-fGh">
+                                        <rect key="frame" x="20" y="178" width="294" height="30"/>
+                                        <color key="backgroundColor" red="0.058823529411764705" green="0.10980392156862745" blue="0.14901960784313725" alpha="0.90135343309859151" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Buscar">
+                                            <color key="titleColor" red="0.75686274509999996" green="0.61568627450000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gsm-GY-dL6"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSy-Uc-B3I">
+                                        <rect key="frame" x="20" y="118" width="294" height="30"/>
+                                        <color key="backgroundColor" red="0.058823529411764705" green="0.10980392156862745" blue="0.14901960784313725" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.75686274509999996" green="0.61568627450000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.75686274509999996" green="0.61568627450000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.10980392156862745" blue="0.14901960784313725" alpha="0.75434639084507038" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CSy-Uc-B3I" secondAttribute="trailing" constant="20" id="4pE-FH-knI"/>
+                                    <constraint firstItem="uYG-OF-zAp" firstAttribute="leading" secondItem="lEO-wQ-vpb" secondAttribute="leading" constant="20" id="50R-6V-pgA"/>
+                                    <constraint firstItem="s7S-FK-fGh" firstAttribute="top" secondItem="CSy-Uc-B3I" secondAttribute="bottom" constant="30" id="9Rs-tC-BtJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="jsa-E9-qnc" secondAttribute="trailing" constant="10" id="C4x-1m-XYs"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYG-OF-zAp" secondAttribute="trailing" constant="20" id="G6i-s5-hLb"/>
+                                    <constraint firstItem="jsa-E9-qnc" firstAttribute="top" secondItem="uYG-OF-zAp" secondAttribute="bottom" constant="-20" id="HNK-BW-hLE"/>
+                                    <constraint firstItem="CSy-Uc-B3I" firstAttribute="top" secondItem="jsa-E9-qnc" secondAttribute="bottom" constant="10" id="Qd0-ki-RLv"/>
+                                    <constraint firstAttribute="trailing" secondItem="s7S-FK-fGh" secondAttribute="trailing" constant="20" id="eSf-f4-DwY"/>
+                                    <constraint firstItem="jsa-E9-qnc" firstAttribute="leading" secondItem="lEO-wQ-vpb" secondAttribute="leading" constant="10" id="iPX-Cl-RI8"/>
+                                    <constraint firstItem="CSy-Uc-B3I" firstAttribute="leading" secondItem="lEO-wQ-vpb" secondAttribute="leading" constant="20" id="jnJ-CQ-nLk"/>
+                                    <constraint firstItem="s7S-FK-fGh" firstAttribute="leading" secondItem="lEO-wQ-vpb" secondAttribute="leading" constant="20" id="lsB-JB-igd"/>
+                                    <constraint firstItem="uYG-OF-zAp" firstAttribute="top" secondItem="lEO-wQ-vpb" secondAttribute="top" constant="-100" id="mDD-Or-pvU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.10980392156862745" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lEO-wQ-vpb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="54e-zZ-XGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lEO-wQ-vpb" secondAttribute="bottom" constant="100" id="BmE-xE-bKD"/>
+                            <constraint firstItem="X43-Ja-kyr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GT2-sP-lKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X43-Ja-kyr" secondAttribute="bottom" id="bwO-hH-LZZ"/>
+                            <constraint firstItem="X43-Ja-kyr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mK6-HT-bNs"/>
+                            <constraint firstItem="lEO-wQ-vpb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="n7J-WI-EI4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEO-wQ-vpb" secondAttribute="trailing" constant="40" id="oi7-Y4-L7K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X43-Ja-kyr" secondAttribute="trailing" id="ulQ-KI-MZW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="47Y-tF-bgf"/>
+                    <connections>
+                        <outlet property="txtPlayer" destination="CSy-Uc-B3I" id="ycN-oA-qdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="41.517857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vyX-Q7-ME9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YWw-WF-7mE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Py8-bc-KT0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.10980392156862745" blue="0.14901960784313725" alpha="0.75" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.79183279679999996" blue="0.41021361890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.10980392160000001" blue="0.14901960780000001" alpha="0.75154049300000003" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.79183279679999996" blue="0.41021361890000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hrz-Ij-hEY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dx-8f-HGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ahriWallpaper" width="1920" height="1120"/>
+        <image name="logo" width="502" height="198"/>
+    </resources>
+</document>
