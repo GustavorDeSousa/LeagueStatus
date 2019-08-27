@@ -18,6 +18,8 @@
 		A1B5B89B23131DF400A26659 /* MapURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5B89923131DF400A26659 /* MapURL.swift */; };
 		A1B5B89D23131E2E00A26659 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5B89C23131E2E00A26659 /* PlayerViewModel.swift */; };
 		A1B5B8A723131F4800A26659 /* PlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5B8A323131E9400A26659 /* PlayerDTO.swift */; };
+		A1DD87FC2314BFA3000174CE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD87FB2314BFA3000174CE /* data.json */; };
+		A1DD87FE2314C0F1000174CE /* ChampionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD87FD2314C0F1000174CE /* ChampionsDTO.swift */; };
 		A1E4200123135D33004917D0 /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4200023135D33004917D0 /* ErrorDTO.swift */; };
 		A1E420032313632B004917D0 /* LastMatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E420022313632B004917D0 /* LastMatchDTO.swift */; };
 		A1EF8C4623137E5800A9D714 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF8C4423137E5800A9D714 /* MatchTableViewCell.swift */; };
@@ -41,6 +43,8 @@
 		A1B5B89923131DF400A26659 /* MapURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapURL.swift; path = ../../../LeagueOfLegndsAPI/LeagueOfLegndsAPI/Service/MapURL.swift; sourceTree = "<group>"; };
 		A1B5B89C23131E2E00A26659 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewModel.swift; path = ../../../LeagueOfLegndsAPI/LeagueOfLegndsAPI/ViewModel/PlayerViewModel.swift; sourceTree = "<group>"; };
 		A1B5B8A323131E9400A26659 /* PlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDTO.swift; sourceTree = "<group>"; };
+		A1DD87FB2314BFA3000174CE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = ../../../data.json; sourceTree = "<group>"; };
+		A1DD87FD2314C0F1000174CE /* ChampionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsDTO.swift; sourceTree = "<group>"; };
 		A1E4200023135D33004917D0 /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
 		A1E420022313632B004917D0 /* LastMatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastMatchDTO.swift; sourceTree = "<group>"; };
 		A1EF8C4423137E5800A9D714 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				A1B5B8A323131E9400A26659 /* PlayerDTO.swift */,
 				A1E4200023135D33004917D0 /* ErrorDTO.swift */,
 				A1E420022313632B004917D0 /* LastMatchDTO.swift */,
+				A1DD87FD2314C0F1000174CE /* ChampionsDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		A1B5B89323131D2400A26659 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A1DD87FB2314BFA3000174CE /* data.json */,
 				A1B5B89823131DF400A26659 /* REST.swift */,
 				A1B5B89923131DF400A26659 /* MapURL.swift */,
 			);
@@ -288,6 +294,7 @@
 				A1EF8C4D2313929D00A9D714 /* SummonerInfoViewController.xib in Resources */,
 				A1EF8C4723137E5800A9D714 /* MatchTableViewCell.xib in Resources */,
 				A1B5B88923131CE500A26659 /* LaunchScreen.storyboard in Resources */,
+				A1DD87FC2314BFA3000174CE /* data.json in Resources */,
 				A1B5B88623131CE500A26659 /* Assets.xcassets in Resources */,
 				A1B5B88123131CE200A26659 /* Main.storyboard in Resources */,
 			);
@@ -349,6 +356,7 @@
 			files = (
 				A1EF8C4C2313929D00A9D714 /* SummonerInfoViewController.swift in Sources */,
 				A1EF8C4623137E5800A9D714 /* MatchTableViewCell.swift in Sources */,
+				A1DD87FE2314C0F1000174CE /* ChampionsDTO.swift in Sources */,
 				A1B5B88423131CE200A26659 /* LeagueStatus.xcdatamodeld in Sources */,
 				A1E420032313632B004917D0 /* LastMatchDTO.swift in Sources */,
 				A1B5B89B23131DF400A26659 /* MapURL.swift in Sources */,
