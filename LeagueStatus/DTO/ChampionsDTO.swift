@@ -12,11 +12,11 @@ struct Champions: Codable {
     let type    : String
     let format  : String
     let version : String
-    let data    : [Champion]
+    let data    : [Info]
 }
 
 struct Champion: Codable {
-    let champion: [Info]
+    let allChamp: [Info]
 }
 
 struct Info: Codable {
@@ -26,18 +26,16 @@ struct Info: Codable {
     let name    : String
     let title   : String
     let blurb   : String
-    let info    : [AtributesChampion]
-    let image   : [ImageChampion]
+    let image   : ImageChampion
     let tags    : [String]
     let partype : String
-    let stats   : [Stats]
 }
 
 struct AtributesChampion: Codable {
-    let attack      : Int
-    let defense     : Int
-    let magic       : Int
-    let difficulty  : Int
+    let attack      : String
+    let defense     : String
+    let magic       : String
+    let difficulty  : String
 }
 
 struct ImageChampion: Codable {

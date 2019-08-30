@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../LeagueOfLegndsAPI/LeagueOfLegndsAPI/Service/REST.swift"
-            timestampString = "588485715.739634"
+            filePath = "LeagueStatus/DTO/ChampionsDTO.swift"
+            timestampString = "588817733.070702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "loadLastMatch(accountId:onComplete:onError:)"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Champions"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeagueStatus/Model/PlayerScreen/SummonerInfoViewController.swift"
+            timestampString = "588817775.617654"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "loadMatch()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -16,7 +16,8 @@ class SummonerInfoViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableMatch: UITableView!
     
     var viewModel: PlayerViewModel? = PlayerViewModel()
-    var lastDTO: [LastMatchDTO?] = []
+    var lastDTO: [LastMatchDTO] = []
+    var champioDTO: Champions?
     
     class func create(viewModel: PlayerViewModel) -> SummonerInfoViewController {
         let controller = SummonerInfoViewController(nibName: "SummonerInfoViewController", bundle: nil)
@@ -37,32 +38,63 @@ class SummonerInfoViewController: UIViewController, UITableViewDelegate, UITable
             lblSummonerLevel.text = String(vm.getPlayer().summonerLevel)
             imgSummonerIcon.downloaded(from: MapURL.ICON_PLAYER + String(vm.getPlayer().profileIconId) + ".png")
         }
+        loadMatch()
+        loadChampions()
     }
+    
+    func loadChampions() {
+        //Recuperando o Json
+        let fileURL = Bundle.main.url(forResource: "data.json", withExtension: nil)!
+        let jsonData = try! Data(contentsOf: fileURL)
+        do {
+            champioDTO = try JSONDecoder().decode(Champions.self, from: jsonData)
+            guard let champ = champioDTO else { return }
+            viewModel?.setListChamppion(champpion: champ)
+            DispatchQueue.main.async {
+                self.tableMatch.reloadData()
+            }
+        }catch{
+            print(error)
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = false
-        
-        REST.loadLastMatch(accountId: "eGQ_c89pY38pUTqXum1wQZDAnwGDTP_f7_bVcF28Qumi",
+    }
+    
+    func loadMatch() {
+        REST.loadLastMatch(accountId: viewModel?.getPlayer().accountId ?? "",
                            onComplete: { (onComplete) in
-                            self.lastDTO = onComplete
-                            
+                            self.viewModel?.setLastMatch(lastMatch: onComplete)
+                            DispatchQueue.main.async {
+                                self.tableMatch.reloadData()
+                            }
                             
         }) { (onError) in
-            
+            //FAZER ALERTA
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableMatch.dequeueReusableCell(withIdentifier: "MatchTableViewCell") as! MatchTableViewCell
-        cell.imgChampion.downloaded(from: "https://ddragon.leagueoflegends.com/cdn/9.16.1/img/champion/Kayle.png")
-        cell.lblChampion.text = "Você é um DEUS"
+        guard let vm = viewModel else { return UITableViewCell() }
+        if viewModel?.getLastMatch().count != 0 {
+            for championId in (vm.getListChamppion().data) {
+                if Int(championId.key) == vm.lastMatchDTO?[0].matches[indexPath.row].champion {
+                    cell.imgChampion.downloaded(from: MapURL.BASEURLIMG_V2 + championId.image.full)
+                    cell.lblChampion.text = championId.name
+                }
+            }
+        } else {
+            return UITableViewCell()
+        }
         return cell
     }
 }

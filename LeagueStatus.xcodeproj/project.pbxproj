@@ -88,7 +88,6 @@
 			children = (
 				A1EF8C4423137E5800A9D714 /* MatchTableViewCell.swift */,
 				A1EF8C4523137E5800A9D714 /* MatchTableViewCell.xib */,
-				A1EF8C4A2313929D00A9D714 /* SummonerInfoViewController.swift */,
 				A1EF8C4B2313929D00A9D714 /* SummonerInfoViewController.xib */,
 			);
 			path = PlayerScreen;
@@ -227,6 +226,7 @@
 		A1B5B8A223131E7300A26659 /* PlayerScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A1EF8C4A2313929D00A9D714 /* SummonerInfoViewController.swift */,
 			);
 			path = PlayerScreen;
 			sourceTree = "<group>";
